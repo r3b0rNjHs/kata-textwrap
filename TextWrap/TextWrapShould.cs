@@ -18,7 +18,11 @@ namespace TextWrap
 
         public string Wrap(string text, int columns)
         {
-            return "hello";
+            if (text.Length <= columns)
+            {
+                return text;
+            }
+            throw new NotImplementedException();
         }
     }
 }
