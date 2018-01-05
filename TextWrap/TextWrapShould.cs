@@ -16,6 +16,12 @@ namespace TextWrap
             Wrap("hello", 7).Should().Be("hello");
         }
 
+        [Fact]
+        public void wrap_if_not_enough_columns_and_no_spaces()
+        {
+            Wrap("hola",2 ).Should().Be("ho\nla");
+        }
+
         public string Wrap(string text, int columns)
         {
             if (text.Length <= columns)
