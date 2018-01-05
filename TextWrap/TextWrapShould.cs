@@ -22,6 +22,12 @@ namespace TextWrap
             Wrap("hola",2 ).Should().Be("ho\nla");
         }
 
+        [Fact]
+        public void wrap_before_word_if_exists_space()
+        {
+            Wrap("hola, mundo", 9).Should().Be("hola,\nmundo");
+        }
+
         public string Wrap(string text, int columns)
         {
             if (text.Length <= columns)
