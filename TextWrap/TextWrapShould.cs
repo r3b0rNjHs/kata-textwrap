@@ -28,6 +28,11 @@ namespace TextWrap
             {
                 return text;
             }
+
+            if (text.Length > columns)
+            {
+                return text.Insert(columns,"\n");
+            }
             throw new NotImplementedException();
         }
     }
