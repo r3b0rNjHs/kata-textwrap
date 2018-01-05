@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TextWrap
 {
-    public class Class1
+    public class TextWrapShould
     {
+
+        public string Wrap(string text, int columns)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
