@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,8 +38,18 @@ namespace TextWrap
 
             if (text.Length > columns)
             {
+                for (int i = columns; i > 0; i--)
+                {
+                    if (text.ElementAt(i) == ' ')
+                    {
+                        StringBuilder sb = new StringBuilder(text);
+                        sb[i] = '\n';
+                        return sb.ToString();
+                    }
+                }
                 return text.Insert(columns,"\n");
             }
+
             throw new NotImplementedException();
         }
     }
