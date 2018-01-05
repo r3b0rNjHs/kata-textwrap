@@ -29,6 +29,12 @@ namespace TextWrap
             Wrap("hola, mundo", 9).Should().Be("hola,\nmundo");
         }
 
+        [Fact]
+        public void wrap_multiple_lines()
+        {
+            Wrap("ohlala", 2).Should().Be("oh\nla\nla");
+        }
+
         public string Wrap(string text, int columns)
         {
             if (text.Length <= columns)
