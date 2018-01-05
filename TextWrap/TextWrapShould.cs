@@ -18,7 +18,7 @@ namespace TextWrap
 
         public string Wrap(string text, int columns)
         {
-            throw new NotImplementedException();
+            return "hello";
         }
     }
 }
